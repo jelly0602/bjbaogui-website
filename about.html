@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我们 | 北京报规设计服务</title>
+  <meta property="og:title" content="关于我们 | 北京报规设计">
+<meta property="og:description" content="了解北京报规设计服务，我们专注北京报规设计领域，提供专业报规设计服务。">
+<meta property="og:url" content="https://www.bjbaogui.cn/about.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="北京报规设计服务">
+  <meta property="og:image" content="https://www.bjbaogui.cn/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.bjbaogui.cn/assets/og-image.jpg">
+  <meta name="description" content="了解北京报规设计服务，我们专注北京报规设计领域，提供方案文本制作、图纸设计、BDB/SHP文件生成等专业服务。">
+  <link rel="canonical" href="https://www.bjbaogui.cn/about.html">
+  
+  
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .about-hero {
+      padding: 140px 0 80px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    }
+    
+    .about-hero .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .about-hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .about-hero-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .about-hero-subtitle {
+      font-size: 1.0625rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto var(--spacing-2xl);
+    }
+    
+    .about-stats {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-3xl);
+      flex-wrap: wrap;
+    }
+    
+    .about-stat {
+      text-align: center;
+    }
+    
+    .about-stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent-color);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .about-stat-label {
+      font-size: 0.9375rem;
+      opacity: 0.9;
+    }
+    
+    .about-section {
+      padding: var(--spacing-3xl) 0;
+    }
+    
+    .about-section:nth-child(even) {
+      background: var(--bg-secondary);
+    }
+    
+    .about-section .container {
+      max-width: 1000px;
+    }
+    
+    .section-title-left {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-lg);
+      padding-left: var(--spacing-lg);
+      border-left: 4px solid var(--primary-color);
+    }
+    
+    .about-text {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .services-grid-about {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .service-card-about {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card-about:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    
+    .service-card-about-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .service-card-about h4 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .service-card-about p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .advantages-grid-about {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .advantage-card-about {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      gap: var(--spacing-lg);
+      align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+    
+    .advantage-card-about:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    
+    .advantage-icon-about {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .advantage-content-about h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .advantage-content-about p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .contact-card-about {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .contact-item-about {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-lg);
+      padding: var(--spacing-md) 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .contact-item-about:last-child {
+      border-bottom: none;
+    }
+    
+    .contact-icon-about {
+      width: 45px;
+      height: 45px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-text-about h4 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    
+    .contact-text-about p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+    
+    @media (max-width: 768px) {
+      .about-hero-title {
+        font-size: 2rem;
+      }
+      
+      .about-stats {
+        gap: var(--spacing-xl);
+      }
+      
+      .services-grid-about,
+      .advantages-grid-about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "关于我们",
+  "description": "了解北京报规设计服务，我们专注北京报规设计领域，提供专业报规设计服务。",
+  "url": "https://www.bjbaogui.cn/about.html"
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">规</span>
+        <span class="brand-text">北京报规设计</span>
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="services.html">专业服务</a></li>
+        <li><a href="process.html">服务流程</a></li>
+        <li><a href="cases.html">项目案例</a></li>
+        <li><a href="knowledge.html">知识库</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+      <div class="navbar-contact">
+        <a href="tel:15910948784" class="btn btn-primary">
+          <i class="fas fa-phone"></i> 15910948784（微信同号）
+        </a>
+      </div>
+      <button class="navbar-toggle" id="navbarToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-badge">关于我们</div>
+      <h1 class="about-hero-title">专注北京报规设计服务</h1>
+      <p class="about-hero-subtitle">深耕北京规划审批领域，为建设项目提供专业、高效、可靠的报规设计服务</p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-number">1000+</div>
+          <div class="about-stat-label">服务项目</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-number">500+</div>
+          <div class="about-stat-label">服务客户</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-number">1-10天</div>
+          <div class="about-stat-label">平均周期</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title-left">我们是谁</h2>
+      <p class="about-text">
+        我们是专注北京报规设计服务的专业团队，深耕北京规划审批领域多年，为建设项目提供方案文本制作、图纸设计、BDB/SHP文件生成、盖章出图等专业服务。
+      </p>
+      <p class="about-text">
+        我们具备正规设计院资质，可出具正式盖章的报规图纸。团队深入理解北京报规流程，熟悉多规合一、规划许可证等各阶段要求，已成功服务超过1000个项目。
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title-left">我们的服务</h2>
+      <p class="about-text">针对报规流程各阶段，提供专业设计服务：</p>
+      <div class="services-grid-about">
+        <div class="service-card-about">
+          <div class="service-card-about-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h4>方案文本制作</h4>
+          <p>多规合一阶段方案册编制、设计说明编写，确保方案符合规划要求。</p>
+        </div>
+        <div class="service-card-about">
+          <div class="service-card-about-icon">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h4>图纸设计</h4>
+          <p>规划许可证阶段总平面图、建筑图纸设计，包括BDB/SHP文件生成。</p>
+        </div>
+        <div class="service-card-about">
+          <div class="service-card-about-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h4>BDB文件生成</h4>
+          <p>总平面图BDB格式文件生成，满足北京市规划审批系统要求。</p>
+        </div>
+        <div class="service-card-about">
+          <div class="service-card-about-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h4>SHP文件生成</h4>
+          <p>空间矢量数据整理，满足GIS系统和规划管理需求。</p>
+        </div>
+        <div class="service-card-about">
+          <div class="service-card-about-icon">
+            <i class="fas fa-stamp"></i>
+          </div>
+          <h4>盖章出图</h4>
+          <p>正规设计院资质，图纸完成后出具正式盖章图纸。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title-left">我们的优势</h2>
+      <p class="about-text">在报规设计领域具有以下核心优势：</p>
+      <div class="advantages-grid-about">
+        <div class="advantage-card-about">
+          <div class="advantage-icon-about">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="advantage-content-about">
+            <h4>正规设计资质</h4>
+            <p>具备正规设计院资质，图纸完成后可出具正式盖章图纸，合法合规。</p>
+          </div>
+        </div>
+        <div class="advantage-card-about">
+          <div class="advantage-icon-about">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="advantage-content-about">
+            <h4>专业流程理解</h4>
+            <p>深入理解北京报规流程，熟悉多规合一、规划许可证等各阶段要求。</p>
+          </div>
+        </div>
+        <div class="advantage-card-about">
+          <div class="advantage-icon-about">
+            <i class="fas fa-file-code"></i>
+          </div>
+          <div class="advantage-content-about">
+            <h4>专业文件生成</h4>
+            <p>熟练掌握BDB、SHP等专业文件格式，确保文件符合系统要求。</p>
+          </div>
+        </div>
+        <div class="advantage-card-about">
+          <div class="advantage-icon-about">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="advantage-content-about">
+            <h4>质量保证</h4>
+            <p>严格质量控制，确保设计成果符合规划要求，提高审批通过率。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title-left">联系我们</h2>
+      <p class="about-text">如有报规设计需求，欢迎随时联系我们：</p>
+      <div class="contact-card-about">
+        <div class="contact-item-about">
+          <div class="contact-icon-about">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-text-about">
+            <h4>电话咨询</h4>
+            <p>15910948784</p>
+          </div>
+        </div>
+        <div class="contact-item-about">
+          <div class="contact-icon-about">
+            <i class="fab fa-weixin"></i>
+          </div>
+          <div class="contact-text-about">
+            <h4>微信咨询</h4>
+            <p>扫码添加微信好友</p>
+          </div>
+        </div>
+        <div class="contact-item-about">
+          <div class="contact-icon-about">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="contact-text-about">
+            <h4>服务时间</h4>
+            <p>7:00-24:00</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: var(--spacing-xl);">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-paper-plane"></i> 联系我们
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">有报规设计需求？</h2>
+        <p class="cta-subtitle">发送项目资料，免费获取专业建议和报价方案</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i> 免费咨询
+          </a>
+          <a href="tel:15910948784" class="btn btn-outline btn-lg">
+            <i class="fas fa-phone"></i> 电话咨询
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-icon">规</span>
+            <span class="brand-text">北京报规设计</span>
+          </div>
+          <p class="brand-description">专注北京报规设计服务，提供方案文本制作、图纸设计、BDB/SHP文件生成等专业服务。</p>
+        </div>
+        <div class="footer-links">
+          <h3>服务内容</h3>
+          <ul>
+            <li><a href="services.html#scheme">方案文本制作</a></li>
+            <li><a href="services.html#drawing">图纸设计</a></li>
+            <li><a href="services.html#bdb">BDB文件生成</a></li>
+            <li><a href="services.html#shp">SHP文件生成</a></li>
+            <li><a href="services.html#stamp">盖章出图</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="process.html">服务流程</a></li>
+            <li><a href="cases.html">项目案例</a></li>
+            <li><a href="knowledge.html">知识库</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>联系方式</h3>
+          <div class="contact-item"><i class="fas fa-phone"></i><span>15910948784</span></div>
+          <div class="contact-item"><i class="fab fa-weixin"></i><span>微信扫码咨询</span></div>
+          <div class="footer-qr"><img src="assets/wechat-qr.jpg" alt="微信二维码"></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><span>7:00-24:00</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 北京报规设计服务 · 专业报规设计服务</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">规</span>
+        <span class="brand-text">北京报规设计</span>
+      </a>
+      <button class="mobile-nav-close" id="mobileNavClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="services.html">专业服务</a></li>
+      <li><a href="process.html">服务流程</a></li>
+      <li><a href="cases.html">项目案例</a></li>
+      <li><a href="knowledge.html">知识库</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+    <div class="mobile-nav-contact">
+      <a href="tel:15910948784" class="btn btn-primary btn-block">
+        <i class="fas fa-phone"></i> 15910948784（微信同号）
+      </a>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

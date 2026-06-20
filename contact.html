@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 | 北京报规设计服务</title>
+  <meta property="og:title" content="联系我们 | 北京报规设计">
+<meta property="og:description" content="联系北京报规设计服务，获取专业报规设计咨询，电话15910948784。">
+<meta property="og:url" content="https://www.bjbaogui.cn/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="北京报规设计服务">
+  <meta property="og:image" content="https://www.bjbaogui.cn/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.bjbaogui.cn/assets/og-image.jpg">
+  <meta name="description" content="联系北京报规设计服务，获取专业报规设计咨询，电话15910948784，微信扫码咨询。">
+  <link rel="canonical" href="https://www.bjbaogui.cn/contact.html">
+  
+  
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .contact-hero {
+      padding: 140px 0 80px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    }
+    
+    .contact-hero .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .contact-hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .contact-hero-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .contact-hero-subtitle {
+      font-size: 1.0625rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto var(--spacing-2xl);
+    }
+    
+    .contact-methods {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-2xl);
+      flex-wrap: wrap;
+    }
+    
+    .contact-method-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+      background: rgba(255,255,255,0.15);
+      padding: var(--spacing-md) var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(10px);
+    }
+    
+    .contact-method-item i {
+      font-size: 1.5rem;
+    }
+    
+    .contact-method-item span {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+    
+    .contact-main {
+      padding: var(--spacing-3xl) 0;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-3xl);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .contact-info-card {
+      background: var(--bg-primary);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-2xl);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .contact-info-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-lg);
+      color: var(--text-primary);
+      padding-bottom: var(--spacing-md);
+      border-bottom: 2px solid var(--primary-color);
+    }
+    
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-lg);
+      padding: var(--spacing-lg) 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .contact-info-item:last-child {
+      border-bottom: none;
+    }
+    
+    .contact-info-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-info-content h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .contact-info-content p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .qr-code-box {
+      text-align: center;
+      padding: var(--spacing-lg);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      margin-top: var(--spacing-md);
+    }
+    
+    .qr-code-box img {
+      width: 120px;
+      height: 120px;
+      border-radius: var(--radius-md);
+    }
+    
+    .qr-code-box p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: var(--spacing-sm);
+    }
+    
+    .faq-item {
+      padding: var(--spacing-md);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .faq-item h4 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .faq-item p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-hero-title {
+        font-size: 2rem;
+      }
+      
+      .contact-methods {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "联系我们",
+  "description": "联系北京报规设计服务，获取专业报规设计咨询，电话15910948784。",
+  "url": "https://www.bjbaogui.cn/contact.html",
+  "telephone": "15910948784"
+}
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">规</span>
+        <span class="brand-text">北京报规设计</span>
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="services.html">专业服务</a></li>
+        <li><a href="process.html">服务流程</a></li>
+        <li><a href="cases.html">项目案例</a></li>
+        <li><a href="knowledge.html">知识库</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+      <div class="navbar-contact">
+        <a href="tel:15910948784" class="btn btn-primary">
+          <i class="fas fa-phone"></i> 15910948784（微信同号）
+        </a>
+      </div>
+      <button class="navbar-toggle" id="navbarToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-hero-badge">联系我们</div>
+      <h1 class="contact-hero-title">有报规设计需求？欢迎随时联系</h1>
+      <p class="contact-hero-subtitle">发送项目资料，免费获取专业建议和报价方案</p>
+      <div class="contact-methods">
+        <div class="contact-method-item">
+          <i class="fas fa-phone"></i>
+          <span>15910948784</span>
+        </div>
+        <div class="contact-method-item">
+          <i class="fab fa-weixin"></i>
+          <span>微信扫码咨询</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3>联系方式</h3>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>电话咨询</h4>
+              <p>15910948784</p>
+              <a href="tel:15910948784" class="btn btn-outline btn-sm">立即拨打</a>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fab fa-weixin"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>微信咨询</h4>
+              <p>扫码添加微信好友</p>
+              <div class="qr-code-box">
+                <img src="assets/wechat-qr.jpg" alt="微信二维码">
+                <p>扫码添加微信好友</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>服务时间</h4>
+              <p>7:00-24:00</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-info-card">
+          <h3>常见问题</h3>
+          
+          <div class="faq-item">
+            <h4>需要准备哪些资料？</h4>
+            <p>通常需要项目基本情况、用地条件、规划要求、现有设计方案等。具体资料清单可根据项目类型确定。</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>费用如何计算？</h4>
+            <p>费用根据项目规模、服务内容、交付时间等因素评估。建议先发送项目资料，我们可以给出大致范围。</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>外地项目能做吗？</h4>
+            <p>可以。我们提供远程服务，通过微信、邮件等方式沟通，确保项目顺利推进。</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>多久能完成？</h4>
+            <p>根据项目复杂程度，一般1-10个工作日。紧急项目可加急处理。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">有报规设计需求？</h2>
+        <p class="cta-subtitle">发送项目资料，免费获取专业建议和报价方案</p>
+        <div class="cta-actions">
+          <a href="tel:15910948784" class="btn btn-primary btn-lg">
+            <i class="fas fa-phone"></i> 电话咨询
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-lg">
+            <i class="fab fa-weixin"></i> 微信咨询
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-icon">规</span>
+            <span class="brand-text">北京报规设计</span>
+          </div>
+          <p class="brand-description">专注北京报规设计服务，提供方案文本制作、图纸设计、BDB/SHP文件生成等专业服务。</p>
+        </div>
+        <div class="footer-links">
+          <h3>服务内容</h3>
+          <ul>
+            <li><a href="services.html#scheme">方案文本制作</a></li>
+            <li><a href="services.html#drawing">图纸设计</a></li>
+            <li><a href="services.html#bdb">BDB文件生成</a></li>
+            <li><a href="services.html#shp">SHP文件生成</a></li>
+            <li><a href="services.html#stamp">盖章出图</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="process.html">服务流程</a></li>
+            <li><a href="cases.html">项目案例</a></li>
+            <li><a href="knowledge.html">知识库</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>联系方式</h3>
+          <div class="contact-item"><i class="fas fa-phone"></i><span>15910948784</span></div>
+          <div class="contact-item"><i class="fab fa-weixin"></i><span>微信扫码咨询</span></div>
+          <div class="footer-qr"><img src="assets/wechat-qr.jpg" alt="微信二维码"></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><span>7:00-24:00</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 北京报规设计服务 · 专业报规设计服务</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">规</span>
+        <span class="brand-text">北京报规设计</span>
+      </a>
+      <button class="mobile-nav-close" id="mobileNavClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="services.html">专业服务</a></li>
+      <li><a href="process.html">服务流程</a></li>
+      <li><a href="cases.html">项目案例</a></li>
+      <li><a href="knowledge.html">知识库</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+    <div class="mobile-nav-contact">
+      <a href="tel:15910948784" class="btn btn-primary btn-block">
+        <i class="fas fa-phone"></i> 15910948784（微信同号）
+      </a>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1626 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识库 | 北京报规设计服务</title>
+  <meta property="og:title" content="知识库 | 北京报规设计">
+<meta property="og:description" content="北京报规设计知识库，提供报规流程、政策解读、技术要求等专业内容。">
+<meta property="og:url" content="https://www.bjbaogui.cn/knowledge.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="北京报规设计服务">
+  <meta property="og:image" content="https://www.bjbaogui.cn/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.bjbaogui.cn/assets/og-image.jpg">
+  <meta name="description" content="北京报规设计知识库，提供报规流程、政策解读、技术要求等专业内容，帮助您了解北京报规设计服务。">
+  <link rel="canonical" href="https://www.bjbaogui.cn/knowledge.html">
+  
+  
+  <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .knowledge-hero {
+      padding: 120px 0 60px;
+      background: var(--primary-gradient);
+      color: var(--text-white);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .knowledge-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    }
+    
+    .knowledge-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .knowledge-hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .knowledge-hero-subtitle {
+      font-size: 1.0625rem;
+      opacity: 0.9;
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    /* 搜索栏 */
+    .search-container {
+      max-width: 600px;
+      position: relative;
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: var(--spacing-md) var(--spacing-xl);
+      padding-left: 50px;
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: 1rem;
+      font-family: var(--font-primary);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+    }
+    
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    
+    /* 主内容区 */
+    .knowledge-content {
+      padding: var(--spacing-2xl) 0;
+    }
+    
+    .knowledge-layout {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: var(--spacing-2xl);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+    
+    /* 侧边栏 */
+    .knowledge-sidebar {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+    
+    .sidebar-section {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+    
+    .sidebar-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-md);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 2px solid var(--primary-color);
+    }
+    
+    /* 分类列表 */
+    .category-list {
+      list-style: none;
+    }
+    
+    .category-item {
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .category-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-sm) var(--spacing-md);
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+      font-size: 0.9375rem;
+    }
+    
+    .category-link:hover,
+    .category-link.active {
+      background: var(--primary-light);
+      color: var(--primary-color);
+    }
+    
+    .category-count {
+      background: var(--bg-tertiary);
+      color: var(--text-muted);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+    }
+    
+    .category-link.active .category-count {
+      background: var(--primary-color);
+      color: var(--text-white);
+    }
+    
+    /* 标签云 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+    }
+    
+    .tag-item {
+      padding: var(--spacing-xs) var(--spacing-sm);
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .tag-item:hover,
+    .tag-item.active {
+      background: var(--primary-color);
+      color: var(--text-white);
+    }
+    
+    /* 建筑类型分类 */
+    .tag-item-building {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-sm) var(--spacing-md);
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+      font-size: 0.9375rem;
+    }
+    
+    .tag-item-building:hover,
+    .tag-item-building.active {
+      background: var(--primary-light);
+      color: var(--primary-color);
+    }
+    
+    /* 热门文章 */
+    .hot-article {
+      display: block;
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid var(--border-color);
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: color 0.3s ease;
+    }
+    
+    .hot-article:last-child {
+      border-bottom: none;
+    }
+    
+    .hot-article:hover {
+      color: var(--primary-color);
+    }
+    
+    .hot-article-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .hot-article-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: var(--spacing-xs);
+    }
+    
+    /* 文章列表区 */
+    .articles-section {
+      min-width: 0;
+    }
+    
+    .articles-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .articles-title {
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    
+    .articles-count {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    
+    /* 文章网格 */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+    }
+    
+    .article-card {
+      background: var(--bg-primary);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+    
+    .article-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    
+    .article-card-header {
+      padding: var(--spacing-lg);
+      padding-bottom: var(--spacing-sm);
+    }
+    
+    .article-card-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-color);
+      padding: 2px var(--spacing-sm);
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .article-card-title {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .article-card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .article-card-title a:hover {
+      color: var(--primary-color);
+    }
+    
+    .article-card-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .article-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-top: 1px solid var(--border-color);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+    
+    .article-card-meta {
+      display: flex;
+      gap: var(--spacing-md);
+    }
+    
+    .article-card-meta span {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+    
+    /* 空状态 */
+    .empty-state {
+      text-align: center;
+      padding: var(--spacing-3xl);
+      color: var(--text-muted);
+    }
+    
+    .empty-state i {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-lg);
+      opacity: 0.5;
+    }
+    
+    /* 移动端适配 */
+    @media (max-width: 1024px) {
+      .knowledge-layout {
+        grid-template-columns: 200px 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .knowledge-hero-title {
+        font-size: 1.75rem;
+      }
+      
+      .knowledge-layout {
+        grid-template-columns: 1fr;
+      }
+      
+      .knowledge-sidebar {
+        position: static;
+      }
+      
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "知识库",
+  "description": "北京报规设计知识库，提供报规流程、政策解读、技术要求等专业内容。",
+  "url": "https://www.bjbaogui.cn/knowledge.html"
+}
+</script>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">规</span>
+        <span class="brand-text">北京报规设计</span>
+      </a>
+      
+      <ul class="navbar-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="services.html">专业服务</a></li>
+        <li><a href="process.html">服务流程</a></li>
+        <li><a href="cases.html">项目案例</a></li>
+        <li><a href="knowledge.html">知识库</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+      
+      <div class="navbar-contact">
+        <a href="tel:15910948784" class="btn btn-primary">
+          <i class="fas fa-phone"></i> 15910948784（微信同号）
+        </a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbarToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 知识库头部 -->
+  <section class="knowledge-hero">
+    <div class="container">
+      <h1 class="knowledge-hero-title">北京报规设计知识库</h1>
+      <p class="knowledge-hero-subtitle">专业政策解读、流程指南、技术要求，助您轻松掌握报规设计</p>
+      
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="搜索文章标题、关键词...">
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区 -->
+  <section class="knowledge-content">
+    <div class="knowledge-layout">
+      <!-- 侧边栏 -->
+      <aside class="knowledge-sidebar">
+        <!-- 分类 -->
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">文章分类</h3>
+          <ul class="category-list">
+            <li class="category-item">
+              <a href="#" class="category-link active" data-category="all">
+                <span>全部文章</span>
+                <span class="category-count" id="countAll">46</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="category-link" data-category="process">
+                <span>报规流程</span>
+                <span class="category-count" id="countProcess">18</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="category-link" data-category="policy">
+                <span>政策解读</span>
+                <span class="category-count" id="countPolicy">10</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="category-link" data-category="technical">
+                <span>技术要求</span>
+                <span class="category-count" id="countTechnical">18</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 建筑类型分类 -->
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">建筑类型</h3>
+          <ul class="category-list">
+            <li class="category-item">
+              <a href="#" class="tag-item-building" data-building="housing">
+                <span>房屋建筑</span>
+                <span class="category-count">8</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="tag-item-building" data-building="temporary">
+                <span>临时建筑</span>
+                <span class="category-count">4</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="tag-item-building" data-building="municipal">
+                <span>市政工程</span>
+                <span class="category-count">9</span>
+              </a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="tag-item-building" data-building="urbanrenewal">
+                <span>城市更新</span>
+                <span class="category-count">6</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 热门标签 -->
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">热门标签</h3>
+          <div class="tag-cloud">
+            <a href="#" class="tag-item" data-tag="duoguiheyi">多规合一</a>
+            <a href="#" class="tag-item" data-tag="bdb">BDB文件</a>
+            <a href="#" class="tag-item" data-tag="shp">SHP文件</a>
+            <a href="#" class="tag-item" data-tag="commitment">告知承诺制</a>
+            <a href="#" class="tag-item" data-tag="online">全程网办</a>
+            <a href="#" class="tag-item" data-tag="temporary">临时建筑</a>
+            <a href="#" class="tag-item" data-tag="municipal">市政工程</a>
+            <a href="#" class="tag-item" data-tag="siteplan">总平面图</a>
+            <a href="#" class="tag-item" data-tag="urbanrenewal">城市更新</a>
+            <a href="#" class="tag-item" data-tag="oldcommunity">老旧小区</a>
+            <a href="#" class="tag-item" data-tag="verification">规划核验</a>
+            <a href="#" class="tag-item" data-tag="survey">多测合一</a>
+            <a href="#" class="tag-item" data-tag="policy">政策解读</a>
+            <a href="#" class="tag-item" data-tag="pipeline">市政管线</a>
+            <a href="#" class="tag-item" data-tag="road">市政道路</a>
+            <a href="#" class="tag-item" data-tag="station">厂站工程</a>
+            <a href="#" class="tag-item" data-tag="river">河道工程</a>
+            <a href="#" class="tag-item" data-tag="corridor">综合管廊</a>
+            <a href="#" class="tag-item" data-tag="rail">轨道交通</a>
+            <a href="#" class="tag-item" data-tag="elevator">加装电梯</a>
+          </div>
+        </div>
+        
+        <!-- 热门文章 -->
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">热门文章</h3>
+          <a href="articles/01-beijing-housing-building-permit-guide.html" class="hot-article">
+            <div class="hot-article-title">北京房屋建筑工程报规全流程指南</div>
+            <div class="hot-article-meta"><i class="fas fa-eye"></i> 1.2k次阅读</div>
+          </a>
+          <a href="articles/03-bdb-file-requirements.html" class="hot-article">
+            <div class="hot-article-title">BDB文件生成要求与常见问题解答</div>
+            <div class="hot-article-meta"><i class="fas fa-eye"></i> 856次阅读</div>
+          </a>
+          <a href="articles/02-beijing-permit-commitment-policy.html" class="hot-article">
+            <div class="hot-article-title">2026年北京规划许可告知承诺制新政解读</div>
+            <div class="hot-article-meta"><i class="fas fa-eye"></i> 986次阅读</div>
+          </a>
+          <a href="articles/04-beijing-duoguiheyi-platform-guide.html" class="hot-article">
+            <div class="hot-article-title">北京多规合一协同平台申报指南</div>
+            <div class="hot-article-meta"><i class="fas fa-eye"></i> 1.1k次阅读</div>
+          </a>
+          <a href="articles/11-beijing-urban-renewal-policy.html" class="hot-article">
+            <div class="hot-article-title">北京城市更新项目规划政策解读</div>
+            <div class="hot-article-meta"><i class="fas fa-eye"></i> 486次阅读</div>
+          </a>
+        </div>
+      </aside>
+      
+      <!-- 文章列表 -->
+      <div class="articles-section">
+        <div class="articles-header">
+          <h2 class="articles-title" id="articlesTitle">全部文章</h2>
+          <span class="articles-count" id="articlesCount">共46篇文章</span>
+        </div>
+        
+        <div class="articles-grid" id="articlesGrid">
+          <!-- 文章1 -->
+          <article class="article-card" data-category="process" data-tags="duoguiheyi,siteplan,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/01-beijing-housing-building-permit-guide.html">北京房屋建筑工程报规全流程指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京房屋建筑工程报规的两个主要阶段：多规合一协同平台会商和建设工程规划许可证办理。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+                <span><i class="fas fa-eye"></i> 1.2k</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章2 -->
+          <article class="article-card" data-category="policy" data-tags="commitment">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/02-beijing-permit-commitment-policy.html">2026年北京规划许可告知承诺制新政解读</a>
+              </h3>
+              <p class="article-card-desc">2026年1月发布新规，进一步扩大规划许可告知承诺制适用范围，大幅缩短办理时限。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 986</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章3 -->
+          <article class="article-card" data-category="technical" data-tags="bdb,siteplan">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/03-bdb-file-requirements.html">BDB文件生成要求与常见问题解答</a>
+              </h3>
+              <p class="article-card-desc">详细介绍BDB文件的定义、要求、制作流程和常见问题。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 856</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章4 -->
+          <article class="article-card" data-category="process" data-tags="duoguiheyi">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/04-beijing-duoguiheyi-platform-guide.html">北京多规合一协同平台申报指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京多规合一协同平台的申报流程、材料要求和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+                <span><i class="fas fa-eye"></i> 1.1k</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章5 -->
+          <article class="article-card" data-category="policy" data-tags="online">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/05-beijing-online-permit-policy.html">北京规划许可全程网办政策解读</a>
+              </h3>
+              <p class="article-card-desc">2023年1月起全面推行规划许可全程网办，本文解读政策要点和操作指南。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 924</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章6 -->
+          <article class="article-card" data-category="process" data-tags="temporary">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/06-beijing-temporary-building-guide.html">北京临时建筑报规全流程指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京临时建筑报规的适用范围、设计要求、申报材料和办理流程。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 756</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章7 -->
+          <article class="article-card" data-category="process" data-tags="municipal">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/07-beijing-municipal-engineering-guide.html">北京市政工程报规全流程指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京市政交通基础设施工程报规的适用范围、申报材料和办理流程。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 698</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章8 -->
+          <article class="article-card" data-category="technical" data-tags="shp">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/08-shp-file-requirements.html">SHP文件生成要求与应用场景</a>
+              </h3>
+              <p class="article-card-desc">介绍SHP文件的定义、要求和应用场景。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 624</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章9 -->
+          <article class="article-card" data-category="technical" data-tags="siteplan,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/09-beijing-site-plan-requirements.html">北京总平面图设计要求与常见问题</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京总平面图的设计要求和常见问题。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+                <span><i class="fas fa-eye"></i> 578</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章10 -->
+          <article class="article-card" data-category="policy" data-tags="duoguiheyi">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/10-beijing-control-detailed-planning.html">北京市控制性详细规划实施管理办法解读</a>
+              </h3>
+              <p class="article-card-desc">2024年12月正式施行，本文解读政策要点。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+                <span><i class="fas fa-eye"></i> 512</span>
+              </div>
+              <span>2026-06-19</span>
+            </div>
+          </article>
+          
+          <!-- 文章11 -->
+          <article class="article-card" data-category="policy" data-tags="urbanrenewal">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/11-beijing-urban-renewal-policy.html">北京城市更新项目规划政策解读</a>
+              </h3>
+              <p class="article-card-desc">解读北京城市更新项目规划土地政策，包括建筑规模管理、控规调整、功能混合等政策要点。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+                <span><i class="fas fa-eye"></i> 486</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章12 -->
+          <article class="article-card" data-category="process" data-tags="oldcommunity,urbanrenewal">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/12-beijing-old-community-renovation.html">北京老旧小区改造报规指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京老旧小区改造项目的报规流程、设计要求和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+                <span><i class="fas fa-eye"></i> 432</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章13 -->
+          <article class="article-card" data-category="technical" data-tags="bdb,siteplan">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/13-bdb-cad-checklist.html">BDB文件生成前CAD总图检查要点</a>
+              </h3>
+              <p class="article-card-desc">详细介绍BDB文件生成前CAD总图需要检查的关键内容，确保顺利通过审批。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章14 -->
+          <article class="article-card" data-category="technical" data-tags="bdb,siteplan,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/14-why-bdb-and-pdf.html">北京房建报规总平面图为什么要提交BDB和同名PDF</a>
+              </h3>
+              <p class="article-card-desc">解释北京房建报规总平面图需要同时提交BDB和同名PDF的原因和要求。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章15 -->
+          <article class="article-card" data-category="technical" data-tags="bdb,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/15-bdb-pdf-mismatch-solution.html">BDB与PDF标识不一致解决指南</a>
+              </h3>
+              <p class="article-card-desc">详细解释BDB与PDF标识不一致的原因和解决方法。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章16 -->
+          <article class="article-card" data-category="technical" data-tags="bdb,municipal">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/16-municipal-bdb-guide.html">北京市政工程BDB报审指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京市政工程BDB报审的类型差异和具体要求。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章17 -->
+          <article class="article-card" data-category="process" data-tags="municipal,pipeline">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/17-municipal-pipeline-approval.html">市政管线工程报规方式说明</a>
+              </h3>
+              <p class="article-card-desc">详细说明市政管线工程的报规方式和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章18 -->
+          <article class="article-card" data-category="process" data-tags="temporary">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/18-temporary-building-validity.html">临时建设工程规划许可证有效期和延期指南</a>
+              </h3>
+              <p class="article-card-desc">详细解释临时建设工程规划许可证的有效期和延期规定。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章19 -->
+          <article class="article-card" data-category="process" data-tags="temporary">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/19-construction-temporary-usage.html">施工暂设用途和限制说明</a>
+              </h3>
+              <p class="article-card-desc">详细说明施工暂设的用途范围和限制条件。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章20 -->
+          <article class="article-card" data-category="technical" data-tags="shp">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/20-shp-data-preparation.html">SHP文件生成前资料准备指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍SHP文件生成前需要准备的边界、轮廓和坐标资料。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章21 -->
+          <article class="article-card" data-category="process" data-tags="verification">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/21-planning-verification-checklist.html">规划核验前资料核对指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍规划核验前需要核对的资料清单和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章22 -->
+          <article class="article-card" data-category="technical" data-tags="survey">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/22-low-risk-survey-report.html">低风险项目多测合一成果报告书说明</a>
+              </h3>
+              <p class="article-card-desc">详细介绍低风险项目多测合一成果报告书的内容和用途。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章23 -->
+          <article class="article-card" data-category="policy" data-tags="commitment">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/23-commitment-system-guide.html">建设工程规划许可告知承诺制适用指南</a>
+              </h3>
+              <p class="article-card-desc">详细解释建设工程规划许可告知承诺制的适用范围和办理流程。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章24 -->
+          <article class="article-card" data-category="policy" data-tags="policy">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/24-getting-business-premises-2026.html">2026年获取经营场所政策解读</a>
+              </h3>
+              <p class="article-card-desc">解读2026年获取经营场所领域北京服务行动方案。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章25 -->
+          <article class="article-card" data-category="policy" data-tags="policy">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/25-permit-exemption-list.html">北京建设工程规划许可证豁免清单解读</a>
+              </h3>
+              <p class="article-card-desc">解读北京建设工程规划许可证豁免清单的适用范围和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章26 -->
+          <article class="article-card" data-category="policy" data-tags="policy">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/26-permit-change-guide.html">北京建设项目用地预审和规划许可变更指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京建设项目用地预审和规划许可变更的适用范围和办理流程。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章27 -->
+          <article class="article-card" data-category="process" data-tags="urbanrenewal">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/27-old-building-renovation-guide.html">北京老旧楼宇更新改造规划报审指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京老旧楼宇更新改造规划报审的适用范围和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章28 -->
+          <article class="article-card" data-category="process" data-tags="urbanrenewal">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/28-old-factory-renovation-guide.html">北京老旧厂房更新改造规划报审指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京老旧厂房更新改造规划报审的适用范围和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章29 -->
+          <article class="article-card" data-category="process" data-tags="municipal">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/29-municipal-types-guide.html">北京市政工程类型与报规要求详解</a>
+              </h3>
+              <p class="article-card-desc">详细介绍北京市政工程的7种类型和各自的报规要求。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章30 -->
+          <article class="article-card" data-category="technical" data-tags="bdb">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/30-bdb-error-solutions.html">BDB常见报错类型与解决方案详解</a>
+              </h3>
+              <p class="article-card-desc">详细分类BDB文件常见报错类型，提供具体解决方案和预防措施。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章31 -->
+          <article class="article-card" data-category="technical" data-tags="siteplan,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/31-report-drawings-guide.html">报规图纸目录编制指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍报规图纸目录编制要求和各专业图纸清单。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章32 -->
+          <article class="article-card" data-category="technical" data-tags="siteplan,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/32-indicator-table-guide.html">指标表编制与核对要点</a>
+              </h3>
+              <p class="article-card-desc">详细介绍指标表编制方法和核对要点，确保数据准确。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章33 -->
+          <article class="article-card" data-category="process" data-tags="temporary">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/33-temporary-building-materials.html">临时建筑申报材料清单详解</a>
+              </h3>
+              <p class="article-card-desc">详细介绍临时建筑申报所需材料清单和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 6分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章34 -->
+          <article class="article-card" data-category="process" data-tags="municipal,road">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/34-municipal-road-guide.html">市政道路工程报规图纸要求</a>
+              </h3>
+              <p class="article-card-desc">详细介绍市政道路工程报规的图纸要求和BDB要素。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章35 -->
+          <article class="article-card" data-category="process" data-tags="municipal,station">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/35-municipal-station-guide.html">厂站类工程报规要点</a>
+              </h3>
+              <p class="article-card-desc">详细介绍厂站类工程报规的图纸要求和指标表编制。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章36 -->
+          <article class="article-card" data-category="process" data-tags="municipal,river">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/36-municipal-river-guide.html">河道工程报规要点</a>
+              </h3>
+              <p class="article-card-desc">详细介绍河道工程报规的图纸要求和BDB要素。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章37 -->
+          <article class="article-card" data-category="process" data-tags="municipal,corridor">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/37-municipal-corridor-guide.html">综合管廊工程报规要点</a>
+              </h3>
+              <p class="article-card-desc">详细介绍综合管廊工程报规的图纸要求和BDB要素。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章38 -->
+          <article class="article-card" data-category="process" data-tags="municipal,rail">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/38-municipal-rail-guide.html">轨道交通工程报规要点</a>
+              </h3>
+              <p class="article-card-desc">详细介绍轨道交通工程报规的图纸要求和各子类型差异。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章39 -->
+          <article class="article-card" data-category="technical" data-tags="shp">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/39-shp-quality-check.html">SHP数据质量检查详解</a>
+              </h3>
+              <p class="article-card-desc">详细介绍SHP数据质量检查的6个维度和检查方法。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章40 -->
+          <article class="article-card" data-category="process" data-tags="verification">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/40-verification-rejection-analysis.html">规划核验退件原因分析</a>
+              </h3>
+              <p class="article-card-desc">详细分析规划核验退件的5大类原因和处理方法。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章41 -->
+          <article class="article-card" data-category="technical" data-tags="survey">
+            <div class="article-card-header">
+              <span class="article-card-tag">技术要求</span>
+              <h3 class="article-card-title">
+                <a href="articles/41-completion-survey-report.html">竣工测量成果报告书解读</a>
+              </h3>
+              <p class="article-card-desc">详细解读竣工测量成果报告书的内容和数据核对方法。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章42 -->
+          <article class="article-card" data-category="policy" data-tags="policy,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/42-permit-faq.html">建设工程规划许可证办理常见问题精选</a>
+              </h3>
+              <p class="article-card-desc">精选建设工程规划许可证办理常见问题，提供专业解答。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 8分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章43 -->
+          <article class="article-card" data-category="policy" data-tags="policy">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/43-urban-planning-regulations.html">北京市城乡规划条例要点解读</a>
+              </h3>
+              <p class="article-card-desc">解读北京市城乡规划条例的核心要点和与报规服务的关系。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章44 -->
+          <article class="article-card" data-category="policy" data-tags="policy,housing">
+            <div class="article-card-header">
+              <span class="article-card-tag">政策解读</span>
+              <h3 class="article-card-title">
+                <a href="articles/44-permit-change-process.html">规划许可变更流程详解</a>
+              </h3>
+              <p class="article-card-desc">详细介绍规划许可变更的适用范围、材料清单和办理流程。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章45 -->
+          <article class="article-card" data-category="process" data-tags="urbanrenewal,elevator">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/45-elevator-installation-guide.html">加装电梯规划报审指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍加装电梯规划报审的适用范围和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+          
+          <!-- 文章46 -->
+          <article class="article-card" data-category="process" data-tags="urbanrenewal">
+            <div class="article-card-header">
+              <span class="article-card-tag">报规流程</span>
+              <h3 class="article-card-title">
+                <a href="articles/46-industrial-park-renovation.html">产业园区更新改造规划报审指南</a>
+              </h3>
+              <p class="article-card-desc">详细介绍产业园区更新改造规划报审的适用范围和注意事项。</p>
+            </div>
+            <div class="article-card-footer">
+              <div class="article-card-meta">
+                <span><i class="fas fa-clock"></i> 7分钟</span>
+              </div>
+              <span>2026-06-20</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA区域 -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">有报规设计需求？</h2>
+        <p class="cta-subtitle">发送项目资料，免费获取专业建议和报价方案</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i> 免费咨询
+          </a>
+          <a href="tel:15910948784" class="btn btn-outline btn-lg">
+            <i class="fas fa-phone"></i> 电话咨询
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-icon">规</span>
+            <span class="brand-text">北京报规设计</span>
+          </div>
+          <p class="brand-description">专注北京报规设计服务，提供方案文本制作、图纸设计、BDB/SHP文件生成等专业服务。</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>服务内容</h3>
+          <ul>
+            <li><a href="services.html#scheme">方案文本制作</a></li>
+            <li><a href="services.html#drawing">图纸设计</a></li>
+            <li><a href="services.html#bdb">BDB文件生成</a></li>
+            <li><a href="services.html#shp">SHP文件生成</a></li>
+            <li><a href="services.html#stamp">盖章出图</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="process.html">服务流程</a></li>
+            <li><a href="cases.html">项目案例</a></li>
+            <li><a href="knowledge.html">知识库</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>联系方式</h3>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>15910948784</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-weixin"></i>
+            <span>微信扫码咨询</span>
+          </div>
+          <div class="footer-qr">
+            <img src="assets/wechat-qr.jpg" alt="微信二维码">
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <span>7:00-24:00</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 北京报规设计服务 · 专业报规设计服务</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 移动端导航 -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">规</span>
+        <span class="brand-text">北京报规设计</span>
+      </a>
+      <button class="mobile-nav-close" id="mobileNavClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="services.html">专业服务</a></li>
+      <li><a href="process.html">服务流程</a></li>
+      <li><a href="cases.html">项目案例</a></li>
+      <li><a href="knowledge.html">知识库</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+    <div class="mobile-nav-contact">
+      <a href="tel:15910948784" class="btn btn-primary btn-block">
+        <i class="fas fa-phone"></i> 15910948784（微信同号）
+      </a>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+  <script src="script.js"></script>
+  
+  <script>
+    // 知识库交互功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput');
+      const categoryLinks = document.querySelectorAll('.category-link');
+      const tagItems = document.querySelectorAll('.tag-item');
+      const buildingItems = document.querySelectorAll('.tag-item-building');
+      const articleCards = document.querySelectorAll('.article-card');
+      const articlesTitle = document.getElementById('articlesTitle');
+      const articlesCount = document.getElementById('articlesCount');
+      
+      let currentCategory = 'all';
+      let currentTag = null;
+      let currentBuilding = null;
+      let searchKeyword = '';
+      
+      // 搜索功能
+      searchInput.addEventListener('input', function() {
+        searchKeyword = this.value.toLowerCase();
+        filterArticles();
+      });
+      
+      // 分类筛选
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          categoryLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          currentCategory = this.dataset.category;
+          currentTag = null;
+          currentBuilding = null;
+          tagItems.forEach(t => t.classList.remove('active'));
+          buildingItems.forEach(b => b.classList.remove('active'));
+          filterArticles();
+        });
+      });
+      
+      // 标签筛选
+      tagItems.forEach(tag => {
+        tag.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            currentTag = null;
+          } else {
+            tagItems.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            currentTag = this.dataset.tag;
+          }
+          currentBuilding = null;
+          buildingItems.forEach(b => b.classList.remove('active'));
+          filterArticles();
+        });
+      });
+      
+      // 建筑类型筛选
+      buildingItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            currentBuilding = null;
+          } else {
+            buildingItems.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentBuilding = this.dataset.building;
+          }
+          currentTag = null;
+          tagItems.forEach(t => t.classList.remove('active'));
+          filterArticles();
+        });
+      });
+      
+      // 筛选文章
+      function filterArticles() {
+        let visibleCount = 0;
+        
+        articleCards.forEach(card => {
+          const category = card.dataset.category;
+          const tags = card.dataset.tags.split(',');
+          const title = card.querySelector('.article-card-title').textContent.toLowerCase();
+          const desc = card.querySelector('.article-card-desc').textContent.toLowerCase();
+          
+          let showByCategory = currentCategory === 'all' || category === currentCategory;
+          let showByTag = !currentTag || tags.includes(currentTag);
+          let showByBuilding = !currentBuilding || tags.includes(currentBuilding);
+          let showBySearch = !searchKeyword || title.includes(searchKeyword) || desc.includes(searchKeyword);
+          
+          if (showByCategory && showByTag && showByBuilding && showBySearch) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // 更新标题和计数
+        updateHeader(visibleCount);
+      }
+      
+      // 更新标题和计数
+      function updateHeader(count) {
+        let title = '全部文章';
+        if (currentCategory === 'process') title = '报规流程';
+        if (currentCategory === 'policy') title = '政策解读';
+        if (currentCategory === 'technical') title = '技术要求';
+        if (currentBuilding) title = getBuildingName(currentBuilding);
+        if (currentTag) title += ' - ' + getTagName(currentTag);
+        if (searchKeyword) title = '搜索结果';
+        
+        articlesTitle.textContent = title;
+        articlesCount.textContent = '共' + count + '篇文章';
+      }
+      
+      // 获取建筑类型名称
+      function getBuildingName(building) {
+        const buildingNames = {
+          'housing': '房屋建筑',
+          'temporary': '临时建筑',
+          'municipal': '市政工程',
+          'urbanrenewal': '城市更新'
+        };
+        return buildingNames[building] || building;
+      }
+      
+      // 获取标签名称
+      function getTagName(tag) {
+        const tagNames = {
+          'duoguiheyi': '多规合一',
+          'bdb': 'BDB文件',
+          'shp': 'SHP文件',
+          'commitment': '告知承诺制',
+          'online': '全程网办',
+          'temporary': '临时建筑',
+          'municipal': '市政工程',
+          'siteplan': '总平面图',
+          'urbanrenewal': '城市更新',
+          'oldcommunity': '老旧小区'
+        };
+        return tagNames[tag] || tag;
+      }
+    });
+  </script>
+</body>
+</html>

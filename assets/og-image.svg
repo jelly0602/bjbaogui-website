@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="#2563eb"/>
+  
+  <!-- 装饰元素 -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#gradient)" opacity="0.1"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 左侧内容 -->
+  <text x="100" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">北京报规设计服务</text>
+  <text x="100" y="280" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)">专业 · 高效 · 可靠</text>
+  
+  <!-- 服务列表 -->
+  <rect x="100" y="340" width="200" height="60" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">方案文本</text>
+  
+  <rect x="320" y="340" width="200" height="60" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="420" y="380" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">图纸设计</text>
+  
+  <rect x="540" y="340" width="200" height="60" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="640" y="380" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">BDB文件</text>
+  
+  <rect x="760" y="340" width="200" height="60" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="860" y="380" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">SHP文件</text>
+  
+  <!-- 联系方式 -->
+  <text x="100" y="480" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.9)">电话/微信：15910948784</text>
+  <text x="100" y="530" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)">www.bjbaogui.cn</text>
+  
+  <!-- 右侧装饰 -->
+  <circle cx="1050" cy="200" r="120" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1050" cy="200" r="80" fill="rgba(255,255,255,0.15)"/>
+  <text x="1050" y="220" font-family="Arial, sans-serif" font-size="60" fill="white" text-anchor="middle">规</text>
+</svg>

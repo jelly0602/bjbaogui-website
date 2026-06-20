@@ -1,0 +1,26 @@
+# robots.txt - 北京报规设计服务
+# https://www.bjbaogui.cn
+
+# 全局规则
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /knowledge-base/
+Disallow: /*.md$
+
+# 百度蜘蛛
+User-agent: Baiduspider
+Allow: /
+Disallow: /private/
+Disallow: /knowledge-base/
+Disallow: /*.md$
+
+# Google蜘蛛
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Disallow: /knowledge-base/
+Disallow: /*.md$
+
+# 站点地图
+Sitemap: https://www.bjbaogui.cn/sitemap.xml
